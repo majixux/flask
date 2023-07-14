@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>west</title>
+</head>
+<body>
+    
+    <h1>Panel administrador WEST</h1>
+    <br>
+    <a href="create">Administrar productos</a>
+
+    <h3>Mostrando productos</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>genero</th>
+                <th>categoria</th>
+                <th>talle</th>
+                <th>precio</th>
+                <th>nombre</th>
+                <th>acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for producto in productos %}
+            <tr>
+                <td>{{producto[0]}}</td>
+                <td>{{producto[1]}}</td>
+                <td>{{producto[2]}}</td>
+                <td>{{producto[3]}}</td>
+                <td>{{producto[4]}}</td>
+                <td>{{producto[5]}}</td>
+                <td> Editar | Borrar</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
